@@ -1,0 +1,65 @@
+@import url('./--Variables.scss');
+
+.services{
+    width:100vw;
+    height: 60vh;
+    min-height: 600px;
+    background-color: rgb(236, 236, 236);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .services-cards{
+            display:grid;
+            grid-template-columns: repeat(3, 200px);
+            gap:30px;
+            margin-top:60px;
+        }
+        hr{
+            width:60%;
+            color:rgb(223, 153, 87);
+            
+        }
+
+        .icon{
+            font-size:30px;
+            color:rgb(223, 153, 87);
+        }
+
+        .card{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            background:white;
+            padding:30px 0;
+            box-shadow: 0px 5px 4px black;
+            
+            &:hover{
+                transition: transform 150ms ease-in-out;
+                transform:scale(1.05);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    .services{
+        min-height: 800px;
+    }
+
+    .services-cards{
+        display: flex !important;
+        flex-direction: column;
+        
+        .card{
+            padding:30px 20px;
+        }
+    }
+}

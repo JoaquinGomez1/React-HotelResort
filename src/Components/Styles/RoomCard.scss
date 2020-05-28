@@ -1,0 +1,107 @@
+@import './--Variables.scss';
+
+.roomCard{
+    width:300px;
+    height: 300px;
+    position:relative;
+    margin:0 20px;
+    box-shadow: 1px 3px 4px black;
+    z-index:0;
+
+    &-image{
+        position:absolute;
+        width: 300px;
+        height: 200px;
+        top:0;
+        z-index:-1;
+
+    }
+
+    &-price{
+        position:absolute;
+        top:0;
+        left: 0;
+        background-color: black;
+        color:white;
+        padding:15px 20px;
+        opacity: .8;
+        border-bottom-right-radius: 15px;
+    }
+
+    &-name{
+        position: absolute;
+        bottom:0;
+        background-color: rgb(141, 141, 141);
+        color:white;
+        width:100%;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        padding:10px 0;
+    }
+
+    &-btn{
+        display:none;
+        color:#fff;
+        text-shadow:0px 0px 4px  black;
+        z-index: 0;
+        position: absolute;
+        width:150px;
+        height: 50px;
+        top:40%;
+        left:25%;
+        padding:10px 20px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 3px solid $secondary-color;
+    }
+
+    &-btn:hover{
+        transition: transform ease-in-out 100ms;
+        background-color: rgba(20, 20, 20, 0.8);
+        transform: scale(1.08);
+        color:$secondary-color;
+    }
+
+    &::before{
+        content:'';
+        position: absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        z-index:20;
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+        background-color: black; 
+        transform:scale(0);
+
+    }
+
+    &:hover{
+        cursor:pointer;
+        transition: transform ease-in-out 100ms;
+        transform: scale(1.02);
+    }
+
+    &:hover &-name,
+    &:hover &-price{
+        transform:scale(0);
+    }
+
+    &:hover &-btn{
+        cursor:pointer;
+        transition: display 100ms ease-in-out;
+        display: block;
+        z-index: 22;
+    }
+
+    &:hover::before{
+        transition:transform 100ms ease-in-out;
+        transform-origin: center ;
+        transform: scale(1);
+    }
+
+    
+}

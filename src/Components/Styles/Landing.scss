@@ -1,0 +1,95 @@
+@import './--Variables.scss';
+
+.landing {
+	background-image: url('/Images/00.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100vw;
+	height: calc(90vh - 90px);
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	&-filter {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, .2);
+		z-index: 0;
+	}
+
+	&-container {
+		width: 800px;
+		height: 350px;
+		background: rgba(66, 66, 66, 0.815);
+		text-align: center;
+		z-index: 1;
+
+		h1 {
+			font-size: 48px;
+			color: $secondary-color;
+			text-transform: uppercase;
+		}
+
+		hr {
+			width: 70%;
+		}
+
+		h2 {
+			margin-top: 50px;
+			color: rgb(252, 241, 231);
+		}
+	}
+}
+
+.landing-button {
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid $secondary-color;
+	letter-spacing: 2px;
+	font-weight: 600;
+	margin-top: 30px;
+	position: relative;
+	cursor: pointer;
+	z-index: 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		background-color: $secondary-color;
+		transition: 0.3s all ease;
+		height: inherit;
+		transform: scaleX(0);
+	}
+
+	&:hover::before {
+		transform: scaleX(1);
+		transform-origin: center;
+		transition: 200ms ease-in all;
+	}
+
+	&:hover {
+		transition: color 100ms ease-in-out;
+		color: black;
+	}
+}
+
+.landing-button:hover::before {
+	width: 100%;
+}
+
+@media (max-width: 600px) {
+	.landing-container {
+		width: 100%;
+		min-height: 400px;
+	}
+}

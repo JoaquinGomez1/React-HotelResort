@@ -1,0 +1,66 @@
+[{
+    "name": "Family premium",
+    "price": 300,
+    "img": "/Images/01-crop.jpg",
+    "guest":5,
+    "size":45,
+    "pets":false,
+    "breakfast":false,
+    "internet":true,
+    "extraTowels": false
+},{
+    "name": "Premium Suite",
+    "price": 500,
+    "img": "/Images/02-crop.jpg",
+    "guest":6,
+    "size":95,
+    "pets":true,
+    "breakfast":true,
+    "internet":true,
+    "extraTowels": true
+
+},{
+    "name": "Single premium",
+    "price": 400,
+    "img": "/Images/03-crop.jpg",
+    "guest":2,
+    "size":45,
+    "pets":true,
+    "breakfast":false,
+    "internet":true,
+    "extraTowels": true
+
+},{
+    "name": "Balcony premium",
+    "price": 600,
+    "img": "/Images/00-crop.jpg",
+    "guest":4,
+    "size":45,
+    "pets":true,
+    "breakfast":true,
+    "internet":true,
+    "extraTowels": true
+
+},{
+    "name": "Dual beds",
+    "price": 200,
+    "img": "/Images/05-crop.jpg",
+    "guest":2,
+    "size":35,
+    "pets":false,
+    "breakfast":false,
+    "internet":true,
+    "extraTowels": false
+
+},{
+    "name": "Friends premium",
+    "price": 800,
+    "img": "/Images/04-crop.jpg",
+    "guest":6,
+    "size":80,
+    "pets":false,
+    "breakfast":true,
+    "internet":true,
+    "extraTowels": false
+
+}]

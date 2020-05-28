@@ -1,0 +1,59 @@
+@import '--Variables.scss';
+
+.featured{
+    height: 50vh;
+    width: 100vw;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h2{
+        margin-bottom: -10px;
+        text-transform: uppercase;
+    }
+    
+    .underline{
+        width: 50%;
+        height: 2px;
+        background-color: $secondary-color;
+        margin:30px 0;
+    }
+    
+    &-container{
+        display:flex;
+    }
+}
+
+
+
+@media(max-width:600px){
+    .featured{
+        min-height: 1100px;
+    }
+    .featured-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2{
+        margin:0;
+    }
+
+    .underline{
+        margin: 0;
+    }
+
+    .roomCard{
+        margin:20px 0;
+        width: 250px;
+        height: 250px;
+
+        &-image{
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+}
