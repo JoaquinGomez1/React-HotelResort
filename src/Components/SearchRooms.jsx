@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Image from './Styles/Images/06.jpg';
 import './Styles/SearchRooms.scss';
 import rooms from '../rooms.json';
 import RoomCard from './RoomCard';
@@ -7,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function SearchRooms() {
 	const backgroundImage = {
-		backgroundImage: `url(${Image})`
+		backgroundImage: `url(${process.env.PUBLIC_URL + '/Images/06.jpg'})`
 	};
 
 	// Rooms imported from json file
