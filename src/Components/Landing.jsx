@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Styles/Landing.scss";
 import { Link } from "react-router-dom";
 import MainButton from "./MainButton";
 
-function Landing() {
+function Landing({ match }) {
+  useEffect(() => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }, [match]);
+
   return (
     <div className="landing">
       <div className="landing-filter" />

@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Styles/SearchRooms.scss";
 import rooms from "../rooms.json";
 import RoomCard from "./RoomCard";
 import { Link } from "react-router-dom";
 import MainButton from "./MainButton";
 
-function SearchRooms() {
+function SearchRooms({ match }) {
   const backgroundImage = {
     backgroundImage: `url(${process.env.PUBLIC_URL + "/Images/06.jpg"})`,
   };
+
+  useEffect(() => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }, [match]);
 
   // Rooms imported from json file
   const [results, setResults] = useState(rooms);
