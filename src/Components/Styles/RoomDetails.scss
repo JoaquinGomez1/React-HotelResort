@@ -1,155 +1,183 @@
-@import './--Variables.scss';
+@import "./--Variables.scss";
 
 .room-image-background {
-	width: 100vw;
-	height: 45vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 100vw;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-	.landing-filter {
-		width: 100%;
-		height: inherit;
-		background-color: rgba(0, 0, 0, .3);
-		z-index: 0;
-		left: 0;
-	}
+  .landing-filter {
+    width: 100%;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    left: 0;
+  }
 
-	.roomDetails-main {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		color: rgb(255, 255, 255);
-		text-shadow: 0px 2px 4px black;
-		z-index: 1;
+  .roomDetails-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 4px black;
+    z-index: 1;
 
-		button {
-			align-self: center;
-			width: 50%;
-			padding: 10px 20px;
-			text-transform: uppercase;
-			letter-spacing: 1.5px;
-			background-color: transparent;
-			color: white;
-			font-weight: 600;
-			text-shadow: 2px 2px 8px black;
-			border: 2px solid rgb(238, 184, 133);
-			cursor: pointer;
-			box-shadow: 0px 2px 5px black;
-			z-index: 0;
-			position: relative;
+    // button {
+    //   align-self: center;
+    //   width: 50%;
+    //   padding: 10px 20px;
+    //   text-transform: uppercase;
+    //   letter-spacing: 1.5px;
+    //   background-color: transparent;
+    //   color: white;
+    //   font-weight: 600;
+    //   text-shadow: 2px 2px 8px black;
+    //   border: 2px solid rgb(238, 184, 133);
+    //   cursor: pointer;
+    //   box-shadow: 0px 2px 5px black;
+    //   z-index: 0;
+    //   position: relative;
 
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				z-index: -1;
-				width: 100%;
-				height: 100%;
-				background-color: $secondary-color;
-				transition: 100ms ease-in-out transform;
-				transform: scale(0);
-			}
+    //   &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     z-index: -1;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: $secondary-color;
+    //     transition: 100ms ease-in-out transform;
+    //     transform: scale(0);
+    //   }
 
-			&:hover::before {
-				transform: scale(1);
-			}
-		}
-	}
+    // &:hover::before {
+    //   transform: scale(1);
+    // }
+    // }
+  }
+}
+
+.roomDetails-outerContainer {
+  max-width: 90vw;
 }
 
 .roomDetails-container {
-	width: 100vw;
-	height: 10vh;
-	min-height: 800px;
-	display: grid;
-	grid-template-areas: "details info" "extras extras";
-	grid-template-columns: 70% 30%;
-	font-size: 1.1rem;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  height: 10vh;
+  min-height: 800px;
+  display: grid;
+  grid-template-areas: "details info" "extras extras";
+  grid-template-columns: 70% 30%;
+  font-size: 1.1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
 
-	.roomDetails-details {
-		grid-area: details;
-		justify-content: center;
-		align-items: center;
-	}
+  .roomDetails-details {
+    grid-area: details;
+    justify-content: center;
+    align-items: center;
+  }
 
-	.roomDetails-info {
-		grid-area: info;
-		justify-content: center;
-		align-items: center;
-	}
+  .roomDetails-info {
+    grid-area: info;
+    justify-content: center;
+    align-items: center;
+  }
 
-	.roomDetails-extras {
-		grid-area: extras;
-		max-width: 100vw;
-		float: right;
-	}
+  .roomDetails-extras {
+    grid-area: extras;
+    max-width: 100vw;
+    float: right;
+  }
 }
 
 .roomDetails-extras {
-	ul {
-		display: flex;
-		list-style: none;
-		li {
-			margin: 0 20px;
-		}
-	}
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      margin: 0 20px;
+    }
+  }
 }
 
 .modal {
-	display: none;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, .4);
-	z-index: 3;
-	justify-content: center;
-	align-items: center;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
 
-	&-container {
-		width: 50%;
-		height: 70%;
-		background: white;
-		border-radius: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		flex-direction: column;
-	}
+  &-container {
+    width: 50%;
+    height: 70%;
+    background: white;
+    border-radius: 20px;
 
-	&-content {
-		margin: 0 100px;
-		font-size: 20px;
+    .iconContainer {
+      width: 100%;
+      height: 200px;
+      .icon {
+        margin: 50px 50px 0 0;
+        float: right;
+        font-size: 2rem;
+        cursor: pointer;
 
-		a {
-			color: $secondary-color;
-		}
-	}
+        &:hover {
+          color: $secondary-color;
+        }
+
+        &:active {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 100px;
+    font-size: 20px;
+
+    a {
+      color: $secondary-color;
+    }
+  }
 }
 
 @media (max-width: 800px) {
-	.roomDetails-container {
-		grid-template-columns: 100%;
-		grid-template-areas: "details" "info" "extras";
-		text-align: center;
-		margin: 0 20px;
-	}
+  .roomDetails-container {
+    grid-template-columns: 100%;
+    grid-template-areas: "details" "info" "extras";
+    text-align: center;
+    margin: 0 20px;
+  }
 
-	.roomDetails-extras {
-		ul {
-			flex-direction: column;
-		}
-	}
+  .roomDetails-extras {
+    ul {
+      flex-direction: column;
+    }
+  }
+
+  .modal-container {
+    width: 90%;
+  }
 }

@@ -1,0 +1,42 @@
+@import "./--Variables.scss";
+
+.landing-button {
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid $secondary-color;
+  letter-spacing: 2px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $secondary-color;
+    transition: 0.3s all ease;
+    height: inherit;
+    transform: scaleX(0);
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: 200ms ease-in all;
+  }
+
+  &:hover {
+    transition: color 100ms ease-in-out;
+    color: black;
+  }
+}
+
+.landing-button:hover::before {
+  width: 100%;
+}
